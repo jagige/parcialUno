@@ -8,8 +8,8 @@ public class playerController : NetworkBehaviour
     private Vector2 _input;
     private float _speed = 5f;
     private PlayerInput _playerInput;
-    //private float _yVelocity;
-    //private float _gravity = -9.81f;
+    private float _yVelocity;
+    private float _gravity = -9.81f;
 
     private void Awake()
     {
@@ -21,8 +21,20 @@ public class playerController : NetworkBehaviour
 
     void Update()
     {
-        Vector3 Move = new Vector3(_input.x, 0, _input.y);
-        _characterController.Move(Move * _speed * Time.deltaTime);
+        if (!IsOwner) return;
+
+        Vector3 move = new Vector3(_input.x, 0, _input.y);
+        
+
+        if (_characterController.isGrounded && _yVelocity < 0)
+        {
+            _yVelocity = -2f;
+        }
+
+        _yVelocity += _gravity * Time.deltaTime;
+        move.y = _yVelocity;
+
+        _characterController.Move(move * _speed * Time.deltaTime);
     }
 
     public override void OnNetworkSpawn()
