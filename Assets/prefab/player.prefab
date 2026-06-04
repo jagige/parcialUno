@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2149425309
+  GlobalObjectIdHash: 728268795
   InScenePlacedSourceGlobalObjectIdHash: 2149425309
   DeferredDespawnTick: 0
   Ownership: 1
@@ -151,6 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerController
   ShowTopMostFoldoutHeaderGroup: 1
+  verde: {fileID: 2100000, guid: 42fc843c2094f3040955d3e99f8df269, type: 2}
+  rojo: {fileID: 2100000, guid: 4ede955d31bc62b40ba5a0c6502b3a2b, type: 2}
+  meshRenderer: {fileID: 7111863657182331331}
 --- !u!143 &-3598146668990752669
 CharacterController:
   m_ObjectHideFlags: 0
@@ -240,11 +243,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: duende2
       objectReference: {fileID: 0}
+    - target: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7624672903241635627, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+    - target: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7378327510708903205, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+    - target: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: -5908177027752278865, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+    - target: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: -8755386011628256732, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+--- !u!23 &7111863657182331331 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1589653344725245031, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+  m_PrefabInstance: {fileID: 8412160172859923876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8302181846003513935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}

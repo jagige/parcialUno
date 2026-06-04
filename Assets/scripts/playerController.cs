@@ -11,6 +11,11 @@ public class playerController : NetworkBehaviour
     private float _yVelocity;
     private float _gravity = -9.81f;
 
+    public Material verde;
+    public Material rojo;
+    public MeshRenderer meshRenderer;
+
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -40,7 +45,30 @@ public class playerController : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         _playerInput.enabled = IsOwner;
+
+        if (!IsOwner) return;
+
+        if (NetworkManager.LocalClientId == 0)
+        {
+            meshRenderer.material = verde;
+        }
+        
+        if (NetworkManager.LocalClientId == 1)
+        {
+            meshRenderer.material = rojo;
+        }
+        
+        /*if (NetworkManager.LocalClientId == 1)
+        {
+            meshRenderer.material.color = Color.yellow;
+        }*/
+
     }
+    /*public void OnStartLocalPlayer()
+    {
+        GetComponent<MeshRenderer>().material = verde;
+    }*/
+
 
     public override void OnNetworkDespawn()
     {
