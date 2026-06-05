@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114950743875594836}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0.8000001, z: -4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0.8, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 1080991763096432629}
   - component: {fileID: 7502056922974174891}
   - component: {fileID: -3598146668990752669}
+  - component: {fileID: 5927399807614629470}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -151,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 7776393847772107639}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -273,9 +274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerController
   ShowTopMostFoldoutHeaderGroup: 1
-  verde: {fileID: 2100000, guid: 42fc843c2094f3040955d3e99f8df269, type: 2}
-  rojo: {fileID: 2100000, guid: 4ede955d31bc62b40ba5a0c6502b3a2b, type: 2}
-  meshRenderer: {fileID: 7111863657182331331}
 --- !u!143 &-3598146668990752669
 CharacterController:
   m_ObjectHideFlags: 0
@@ -301,6 +299,24 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5927399807614629470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776393847772107639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79794d0cabdbd2d4da74378f1f7517cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayerConfig
+  ShowTopMostFoldoutHeaderGroup: 1
+  _playerInput: {fileID: 1080991763096432629}
+  _camera: {fileID: 2114950743875594836}
+  verde: {fileID: 2100000, guid: 42fc843c2094f3040955d3e99f8df269, type: 2}
+  rojo: {fileID: 2100000, guid: 4ede955d31bc62b40ba5a0c6502b3a2b, type: 2}
+  meshRenderer: {fileID: 7111863657182331331}
 --- !u!1001 &8412160172859923876
 PrefabInstance:
   m_ObjectHideFlags: 0
