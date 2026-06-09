@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 7502056922974174891}
   - component: {fileID: -3598146668990752669}
   - component: {fileID: 5927399807614629470}
+  - component: {fileID: 1545240075354002897}
+  - component: {fileID: 833596353706456377}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -317,6 +319,40 @@ MonoBehaviour:
   verde: {fileID: 2100000, guid: 42fc843c2094f3040955d3e99f8df269, type: 2}
   rojo: {fileID: 2100000, guid: 4ede955d31bc62b40ba5a0c6502b3a2b, type: 2}
   meshRenderer: {fileID: 7111863657182331331}
+--- !u!135 &1545240075354002897
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776393847772107639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &833596353706456377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776393847772107639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d28875e1ca2c342b2a3c3e8b70721e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  _inventory: []
 --- !u!1001 &8412160172859923876
 PrefabInstance:
   m_ObjectHideFlags: 0
