@@ -18,9 +18,22 @@ public class stringInputField : MonoBehaviour
         Debug.Log(stringName);
     }
 
-    public void caractrerIp(string ip)
+   /* public void caractrerIp(string ip)
     {
+        if (ip.Length <= 0)
+        {
+            Debug.Log("ip no válida");
+        }
+        else if(ip.Any(char.IsDigit))
+        {
+
+        }
+        else
+        {
+            Debug.Log(ip);
+        }
         numeroIp = ip;
-    }
+        Debug.Log(numeroIp);
+    }*/
 
 }
