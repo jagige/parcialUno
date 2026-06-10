@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3210321740330136606}
   - component: {fileID: 6164285890116138931}
   - component: {fileID: 8691522712554254503}
+  - component: {fileID: 4712429491428309365}
   m_Layer: 0
   m_Name: trineo
   m_TagString: Untagged
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2557836640
+  GlobalObjectIdHash: 4285355648
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -102,6 +103,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.21
   m_Center: {x: 0, y: 0, z: -0.21}
+--- !u!114 &4712429491428309365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979677344146252480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f6ed652e02fbf4989946fdc900f1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::trineo
+  ShowTopMostFoldoutHeaderGroup: 1
+  _visualGO: {fileID: 6239732791541165221}
+  _itemName: Trineo
+  _rotationSpeed: 9.9
 --- !u!1001 &6509551097557275124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba59f75ced08b3a49883a0a9e967840c, type: 3}
+--- !u!1 &6239732791541165221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba59f75ced08b3a49883a0a9e967840c, type: 3}
+  m_PrefabInstance: {fileID: 6509551097557275124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6763328322460628511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba59f75ced08b3a49883a0a9e967840c, type: 3}

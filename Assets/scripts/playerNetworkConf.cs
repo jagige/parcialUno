@@ -10,6 +10,7 @@ public class NetworkPlayerConfig : NetworkBehaviour
     public Material verde;
     public Material rojo;
     public MeshRenderer meshRenderer;
+    public MeshRenderer meshRendererR;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class NetworkPlayerConfig : NetworkBehaviour
         if (NetworkManager.LocalClientId == 1)
         {
             meshRenderer.material = rojo;
+            meshRendererR.material = rojo;
         }
     }
    
