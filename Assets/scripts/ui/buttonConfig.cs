@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,8 +8,8 @@ public class buttonConfig : MonoBehaviour
 {
     [SerializeField] private Button _botonServidor;
     [SerializeField] private Button _botonCliente;
-    [SerializeField] private GameObject CanvasInicial
-        ;
+    [SerializeField] private GameObject CanvasInicial;
+    [SerializeField] TextMeshProUGUI _textoVariable;
     public void conectarCliente()
     {
         CanvasInicial.SetActive(false);
