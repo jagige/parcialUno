@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class buttonConfig : MonoBehaviour
 {
     [SerializeField] private Button _botonServidor;
+    [SerializeField] private Button _botonCliente;
     [SerializeField] private GameObject CanvasInicial
         ;
     public void conectarCliente()
     {
+        CanvasInicial.SetActive(false);
         NetworkManager.Singleton.StartClient();
     }
 
@@ -22,10 +24,12 @@ public class buttonConfig : MonoBehaviour
     private void OnEnable()
     {
         _botonServidor.onClick.AddListener(conectarServidor);
+        _botonCliente.onClick.AddListener(conectarCliente);
     }
     private void OnDisable()
     {
         _botonServidor.onClick.RemoveListener(conectarServidor);
+        _botonCliente.onClick.RemoveListener(conectarCliente);
     }
 
 }
