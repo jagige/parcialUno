@@ -15,9 +15,14 @@ public class PlayerInventory : MonoBehaviour
         {
             _inventory.Add(item.GetItemData());
             item.PickUp();
+            
+        }
+
+        if (other.gameObject.CompareTag("regalo")) {
             tieneRegalo = tieneRegalo + 1;
         }
-        
+
+
     }
 
     private void Update()

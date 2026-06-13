@@ -3856,6 +3856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: regalo
       objectReference: {fileID: 0}
+    - target: {fileID: 7655049419695541682, guid: c0979e0db9d2c7042885951e3424a4fc, type: 3}
+      propertyPath: m_TagString
+      value: regalo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
