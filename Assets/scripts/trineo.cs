@@ -1,15 +1,17 @@
 using UnityEngine;
-using Unity.Netcode;
 
-public class trineo : Item
+public class trineo : MonoBehaviour
 {
-    public override string GetItemData()
+    private void OnTriggerEnter(Collider other)
     {
-        return _itemName;
-    }
+        playerItem player = other.GetComponent<playerItem>();
 
-    public override void PickUp()
-    {
-        
+        // Si es un jugador y tiene un objeto, hace la entrega
+        if (player != null && player.hasItem)
+        {
+            player.DeliverItem();
+
+            // Opcional: Aquí podrías reactivar el objeto 'PickableItem' en el mapa si deseas
+        }
     }
 }

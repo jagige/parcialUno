@@ -1,29 +1,17 @@
-using Unity.Netcode;
 using UnityEngine;
 
-public class regalo : Item
+public class regalo : MonoBehaviour
 {
-    public override string GetItemData()
+    private void OnTriggerEnter(Collider other)
     {
-        return _itemName;
-    }
+        // Verificamos si lo que entró es un jugador
+        playerItem player = other.GetComponent<playerItem>();
 
-    public override void PickUp()
-    {
-        if (IsServer)
+        if (player != null && !player.hasItem)
         {
-            NetworkObject.Despawn();
+            player.PickUpItem();
+            // Aquí podrías destruir el objeto o moverlo a otra posición para que reaparezca
+            gameObject.SetActive(false);
         }
-        else
-        {
-            PickUpServerRpc();
-        }
-        Debug.Log($"Picked: {_itemName}");
-    }
-
-    [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
-    private void PickUpServerRpc()
-    {
-        NetworkObject.Despawn(true);
     }
 }
