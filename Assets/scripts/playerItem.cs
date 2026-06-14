@@ -3,18 +3,26 @@ using UnityEngine;
 
 public class playerItem : NetworkBehaviour
 {
-    // Variable local para saber si este jugador lleva el objeto
+    // Variable para saber si este jugador lleva el objeto
     public bool hasItem = false;
+    private bool tieneRegalo;
+    
 
-    // Opcional: Referencia visual del objeto que lleva (para activarlo/desactivarlo)
-    [SerializeField] private GameObject visualItem;
+    //Referencia visual del objeto que lleva (para activarlo o desactivarlo)
+    //[SerializeField] private GameObject visualItem;
+    [SerializeField] private GameObject duende2;
+    [SerializeField] private GameObject duendeConRegalo;
 
     public void PickUpItem()
     {
         if (!IsOwner) return; // Solo el dueño del personaje puede recogerlo activamente
 
         hasItem = true;
-        if (visualItem != null) visualItem.SetActive(true);
+        if (duende2 != null)
+        {
+            duende2.SetActive(false);
+            duendeConRegalo.SetActive(true);
+        }
     }
 
     public void DeliverItem()
@@ -22,7 +30,11 @@ public class playerItem : NetworkBehaviour
         if (!IsOwner || !hasItem) return;
 
         hasItem = false;
-        if (visualItem != null) visualItem.SetActive(false);
+        if (duendeConRegalo != null)
+        {
+            duende2.SetActive(true);
+            duendeConRegalo.SetActive(false);
+        }
 
         // Le avisamos al servidor que entregamos el objeto con éxito
         SubmitScoreServerRpc();

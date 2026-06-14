@@ -11,7 +11,8 @@ public class PlayerInventory : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
        
-        if (other.gameObject.CompareTag("regalo")) {
+        if (other.gameObject.CompareTag("regalo")) 
+        {
             tieneRegalo = true;
         }
 

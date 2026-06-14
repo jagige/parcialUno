@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 728268795
+  GlobalObjectIdHash: 2149425309
   InScenePlacedSourceGlobalObjectIdHash: 2149425309
   DeferredDespawnTick: 0
   Ownership: 1
@@ -357,6 +357,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   hasItem: 0
   visualItem: {fileID: 7655049419695541682, guid: c0979e0db9d2c7042885951e3424a4fc, type: 3}
+  duende2: {fileID: 8681979977954762997}
+  duendeConRegalo: {fileID: 6235377278994636533}
 --- !u!1001 &6505989834120192932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,6 +423,11 @@ PrefabInstance:
 --- !u!23 &5496218950349193155 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1589653344725245031, guid: ed62a69004582bc4ab3d1f8488d37430, type: 3}
+  m_PrefabInstance: {fileID: 6505989834120192932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6235377278994636533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ed62a69004582bc4ab3d1f8488d37430, type: 3}
   m_PrefabInstance: {fileID: 6505989834120192932}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6756334257090856015 stripped
@@ -529,5 +536,10 @@ MeshRenderer:
 --- !u!4 &8302181846003513935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
+  m_PrefabInstance: {fileID: 8412160172859923876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8681979977954762997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0816bd265a6da814e9c827bcf8c26261, type: 3}
   m_PrefabInstance: {fileID: 8412160172859923876}
   m_PrefabAsset: {fileID: 0}
