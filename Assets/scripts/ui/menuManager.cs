@@ -24,23 +24,17 @@ public class menuManager : MonoBehaviour
     {
         _CanvasInicial.SetActive(false);
         _CanvasEsperando.SetActive(true);
-
+        Time.timeScale = 0f; // ← pause while waiting for client
         NetworkManager.Singleton.StartHost();
-
-        // Subscribe to the client connected event
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
     }
 
     private void OnClientConnected(ulong clientId)
     {
-        // Ignore the host's own connection (clientId == 0 is usually the host)
         if (clientId == NetworkManager.Singleton.LocalClientId) return;
 
-        // A real client joined!
         _CanvasEsperando.SetActive(false);
-        Time.timeScale = 1f;
-
-        // Unsubscribe so it only fires once (or keep it if you want it per-client)
+        Time.timeScale = 1f; // ← resume when client joins
         NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
     }
     public void pantallaCliente()
