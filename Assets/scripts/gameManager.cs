@@ -1,6 +1,8 @@
 using TMPro;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : NetworkBehaviour
 {
@@ -15,6 +17,8 @@ public class gameManager : NetworkBehaviour
     [SerializeField] private TextMeshProUGUI txtScorePlayer2;
     //pantalla final
     [SerializeField] private TextMeshProUGUI txtoGanador;
+    [SerializeField] private Button _botonVolveraJugar;
+    [SerializeField] private Button _botonSalir;
     //reloj
     [SerializeField] float tiempoRestante;
     [SerializeField] private GameObject _CanvasFinal;
@@ -105,4 +109,19 @@ public class gameManager : NetworkBehaviour
             txtoGanador.text = "EMPATARON";
         }
     }
+
+    private void OnEnable()
+    {
+        //_botonVolveraJugar.onClick.AddListener(cargarEscena);
+        _botonSalir.onClick.AddListener(Application.Quit);
+    }
+    private void OnDisable()
+    {
+       // _botonVolveraJugar.onClick.RemoveListener(cargarEscena);
+    }
+
+    /*private void cargarEscena()
+    {
+        SceneManager.LoadScene("JuegoNavidad");
+    }*/
 }

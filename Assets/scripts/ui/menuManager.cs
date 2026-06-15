@@ -17,6 +17,8 @@ public class menuManager : MonoBehaviour
     [SerializeField] private Button _botonServidor;
     [SerializeField] private Button _botonCliente;
     [SerializeField] private Button _botonConectar;
+    [SerializeField] private Button _botonSalir;
+    [SerializeField] private Button _botonVolver;
 
     string numeroIp;
 
@@ -54,11 +56,15 @@ public class menuManager : MonoBehaviour
         _botonServidor.onClick.AddListener(conectarServidor);
         _botonCliente.onClick.AddListener(pantallaCliente);
         _botonConectar.onClick.AddListener(conectarCliente);
+        _botonVolver.onClick.AddListener(volveraMenu);
+        _botonSalir.onClick.AddListener(Application.Quit);
     }
     private void OnDisable()
     {
         _botonServidor.onClick.RemoveListener(conectarServidor);
         _botonCliente.onClick.RemoveListener(pantallaCliente);
+        _botonConectar.onClick.RemoveListener(conectarCliente);
+        _botonVolver.onClick.RemoveListener(volveraMenu);
     }
 
     
@@ -86,4 +92,9 @@ public class menuManager : MonoBehaviour
        
     }
 
+    private void volveraMenu()
+    {
+        _CanvasInicial.SetActive(true);
+        _CanvasCliente.SetActive(false);
+    }
 }

@@ -3552,6 +3552,8 @@ MonoBehaviour:
   txtScorePlayer1: {fileID: 2106106304}
   txtScorePlayer2: {fileID: 742064807}
   txtoGanador: {fileID: 134897368}
+  _botonVolveraJugar: {fileID: 0}
+  _botonSalir: {fileID: 1590101170}
   tiempoRestante: 60
   _CanvasFinal: {fileID: 17900425}
   tiempoText: {fileID: 1146395770}
@@ -4802,6 +4804,8 @@ MonoBehaviour:
   _botonServidor: {fileID: 378270430}
   _botonCliente: {fileID: 530030558}
   _botonConectar: {fileID: 1963971507}
+  _botonSalir: {fileID: 1510666625}
+  _botonVolver: {fileID: 86060220}
 --- !u!1 &1404852525
 GameObject:
   m_ObjectHideFlags: 0
