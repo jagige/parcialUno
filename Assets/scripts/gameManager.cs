@@ -13,12 +13,33 @@ public class gameManager : NetworkBehaviour
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI txtScorePlayer1;
     [SerializeField] private TextMeshProUGUI txtScorePlayer2;
+    //reloj
+    [SerializeField] float tiempoRestante;
+    [SerializeField] private GameObject _CanvasFinal;
+    [SerializeField] TextMeshProUGUI tiempoText;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
+
+    void Start()
+    {
+       
+    }
+
+
+    void Update()
+    {
+        tiempoText.text = (tiempoRestante - Time.time).ToString("F0");
+
+        if ((tiempoRestante - Time.time) <= 0)
+        {
+            _CanvasFinal.SetActive(true);
+        }
+    }
+
 
     public override void OnNetworkSpawn()
     {
@@ -27,6 +48,7 @@ public class gameManager : NetworkBehaviour
         scorePlayer2.OnValueChanged += OnScoreChanged;
 
         UpdateUI(0, 0); // Inicializar UI
+        tiempoRestante = tiempoRestante + Time.time;
     }
 
     public override void OnNetworkDespawn()

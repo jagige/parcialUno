@@ -3551,6 +3551,9 @@ MonoBehaviour:
     m_InternalValue: 0
   txtScorePlayer1: {fileID: 2106106304}
   txtScorePlayer2: {fileID: 742064807}
+  tiempoRestante: 6
+  _CanvasFinal: {fileID: 17900425}
+  tiempoText: {fileID: 1146395770}
 --- !u!1 &973494926
 GameObject:
   m_ObjectHideFlags: 0
