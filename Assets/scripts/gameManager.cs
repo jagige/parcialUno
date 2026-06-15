@@ -13,10 +13,13 @@ public class gameManager : NetworkBehaviour
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI txtScorePlayer1;
     [SerializeField] private TextMeshProUGUI txtScorePlayer2;
+    //pantalla final
+    [SerializeField] private TextMeshProUGUI txtoGanador;
     //reloj
     [SerializeField] float tiempoRestante;
     [SerializeField] private GameObject _CanvasFinal;
     [SerializeField] TextMeshProUGUI tiempoText;
+    
 
     private void Awake()
     {
@@ -36,7 +39,8 @@ public class gameManager : NetworkBehaviour
 
         if ((tiempoRestante - Time.time) <= 0)
         {
-            _CanvasFinal.SetActive(true);
+             gameOver();
+           // _CanvasFinal.SetActive(true);
         }
     }
 
@@ -81,6 +85,24 @@ public class gameManager : NetworkBehaviour
         else
         {
             scorePlayer2.Value++;
+        }
+    }
+
+    private void gameOver()
+    {
+        _CanvasFinal.SetActive(true);
+
+        if (scorePlayer1.Value > scorePlayer2.Value)
+        {
+            txtoGanador.text = "GANÓ EL JUGADOR VERDE";
+        }
+        else if (scorePlayer2.Value > scorePlayer1.Value)
+        {
+            txtoGanador.text = "GANÓ EL JUGADOR ROJO";
+        }
+        else
+        {
+            txtoGanador.text = "EMPATARON";
         }
     }
 }

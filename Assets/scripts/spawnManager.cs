@@ -41,7 +41,7 @@ public class SpawnManager : NetworkBehaviour
         float spawnPosZ = Random.Range(-_spawnRange, _spawnRange);
 
         //return a new position vector at ground level (Y = 0)
-        Vector3 randomPos = new Vector3(spawnPosX, 0f, spawnPosZ);
+        Vector3 randomPos = new Vector3(spawnPosX, 0.1f, spawnPosZ);
 
         return randomPos;
     }
