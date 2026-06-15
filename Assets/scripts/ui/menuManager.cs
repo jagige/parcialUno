@@ -20,6 +20,11 @@ public class menuManager : MonoBehaviour
 
     string numeroIp;
 
+    private void Start()
+    {
+        Time.timeScale = 0f;
+    }
+
     public void conectarServidor()
     {
         _CanvasInicial.SetActive(false);

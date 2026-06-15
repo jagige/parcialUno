@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2149425309
+  GlobalObjectIdHash: 728268795
   InScenePlacedSourceGlobalObjectIdHash: 2149425309
   DeferredDespawnTick: 0
   Ownership: 1
@@ -321,6 +321,8 @@ MonoBehaviour:
   rojo: {fileID: 2100000, guid: 4ede955d31bc62b40ba5a0c6502b3a2b, type: 2}
   meshRenderer: {fileID: 7111863657182331331}
   meshRendererR: {fileID: 5496218950349193155}
+  posisionSpawn: {fileID: 7332109710531880309, guid: 92ab2b4a96cc28f4b818c90fefd36a7a, type: 3}
+  posisionSpawn2: {fileID: 5034898279942572843, guid: aa90c7c2295e0914f9c0e66de71273b9, type: 3}
 --- !u!135 &1545240075354002897
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -356,7 +358,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::playerItem
   ShowTopMostFoldoutHeaderGroup: 1
   hasItem: 0
-  visualItem: {fileID: 7655049419695541682, guid: c0979e0db9d2c7042885951e3424a4fc, type: 3}
   duende2: {fileID: 8681979977954762997}
   duendeConRegalo: {fileID: 6235377278994636533}
 --- !u!1001 &6505989834120192932
