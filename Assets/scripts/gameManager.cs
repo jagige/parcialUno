@@ -112,16 +112,20 @@ public class gameManager : NetworkBehaviour
 
     private void OnEnable()
     {
-        //_botonVolveraJugar.onClick.AddListener(cargarEscena);
+        _botonVolveraJugar.onClick.AddListener(cargarEscena);
         _botonSalir.onClick.AddListener(Application.Quit);
     }
     private void OnDisable()
     {
-       // _botonVolveraJugar.onClick.RemoveListener(cargarEscena);
+        _botonVolveraJugar.onClick.RemoveListener(cargarEscena);
     }
 
-    /*private void cargarEscena()
+    private void cargarEscena()
     {
-        SceneManager.LoadScene("JuegoNavidad");
-    }*/
+        if (IsServer)
+        {
+            NetworkManager.Singleton.SceneManager.LoadScene("JuegoNavidad", UnityEngine.SceneManagement.LoadSceneMode.Single);
+
+        }
+    }
 }
