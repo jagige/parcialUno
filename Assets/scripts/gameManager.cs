@@ -44,7 +44,6 @@ public class gameManager : NetworkBehaviour
         if ((tiempoRestante - Time.time) <= 0)
         {
              gameOver();
-           // _CanvasFinal.SetActive(true);
         }
     }
 

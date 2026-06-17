@@ -3554,7 +3554,7 @@ MonoBehaviour:
   txtoGanador: {fileID: 134897368}
   _botonVolveraJugar: {fileID: 694541649}
   _botonSalir: {fileID: 1590101170}
-  tiempoRestante: 60
+  tiempoRestante: 8
   _CanvasFinal: {fileID: 17900425}
   tiempoText: {fileID: 1146395770}
 --- !u!1 &973494926
@@ -6617,7 +6617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5034898279942572843, guid: aa90c7c2295e0914f9c0e66de71273b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.21
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 5034898279942572843, guid: aa90c7c2295e0914f9c0e66de71273b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6670,7 +6670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332109710531880309, guid: 92ab2b4a96cc28f4b818c90fefd36a7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.95
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 7332109710531880309, guid: 92ab2b4a96cc28f4b818c90fefd36a7a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6678,7 +6678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7332109710531880309, guid: 92ab2b4a96cc28f4b818c90fefd36a7a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.31
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 7332109710531880309, guid: 92ab2b4a96cc28f4b818c90fefd36a7a, type: 3}
       propertyPath: m_LocalRotation.w
