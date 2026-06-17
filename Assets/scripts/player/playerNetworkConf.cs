@@ -12,6 +12,9 @@ public class NetworkPlayerConfig : NetworkBehaviour
     public MeshRenderer meshRenderer;
     public MeshRenderer meshRendererR;
 
+    public Transform posisionSpawn;
+    public Transform posisionSpawn2;
+
     private void Awake()
     {
         //PlayerInput
@@ -28,12 +31,14 @@ public class NetworkPlayerConfig : NetworkBehaviour
         if (NetworkManager.LocalClientId == 0)
         {
             meshRenderer.material = verde;
+            transform.position = posisionSpawn.position;
         }
 
         if (NetworkManager.LocalClientId == 1)
         {
             meshRenderer.material = rojo;
             meshRendererR.material = rojo;
+            transform.position = posisionSpawn2.position;
         }
     }
    

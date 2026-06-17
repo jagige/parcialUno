@@ -5,20 +5,14 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] private List<string> _inventory = new List<string>();
     private bool tieneRegalo;
     [SerializeField] private  GameObject duende2;
     [SerializeField] private GameObject duendeConRegalo;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Item>(out var item))
+       
+        if (other.gameObject.CompareTag("regalo")) 
         {
-            _inventory.Add(item.GetItemData());
-            item.PickUp();
-            
-        }
-
-        if (other.gameObject.CompareTag("regalo")) {
             tieneRegalo = true;
         }
 

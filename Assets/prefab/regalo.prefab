@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3274316493542417545}
   - component: {fileID: 6150104570899434242}
   - component: {fileID: 501316627577307105}
-  - component: {fileID: 8518480965917869931}
+  - component: {fileID: 5078159136770292863}
   m_Layer: 0
   m_Name: regalo
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1200774702
+  GlobalObjectIdHash: 473681608
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -81,7 +81,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: -0.18, y: 0.46, z: -2.15}
---- !u!114 &8518480965917869931
+--- !u!114 &5078159136770292863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cf26bc5349ba34d83ad2b98afc4fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::regalo
-  ShowTopMostFoldoutHeaderGroup: 1
-  _visualGO: {fileID: 2059589215509608242}
-  _itemName: Regalo
-  _rotationSpeed: 443.9
 --- !u!1001 &1176645303296707171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,10 +153,5 @@ PrefabInstance:
 --- !u!4 &1720078009917812104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e4a6762e69b41b34aa2b92fb58a508f0, type: 3}
-  m_PrefabInstance: {fileID: 1176645303296707171}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2059589215509608242 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e4a6762e69b41b34aa2b92fb58a508f0, type: 3}
   m_PrefabInstance: {fileID: 1176645303296707171}
   m_PrefabAsset: {fileID: 0}
